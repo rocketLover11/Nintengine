@@ -1,0 +1,33 @@
+buildType:
+  default: debug
+  choices:
+    debug:
+      short: Debug
+      buildType: Debug
+    release:
+      short: Release
+      buildType: Release
+
+platform:
+  default: wii
+  choices:
+    wii:
+      short: Wii
+      settings:
+        CMAKE_TOOLCHAIN_FILE: cmake/toolchains/Wii.cmake
+    switch:
+      short: Switch
+      settings:
+        CMAKE_TOOLCHAIN_FILE: cmake/toolchains/Switch.cmake
+    wiiu:
+      short: Wii U
+      settings:
+        CMAKE_TOOLCHAIN_FILE: cmake/toolchains/WiiU.cmake
+    3ds:
+      short: 3DS
+      settings:
+        CMAKE_TOOLCHAIN_FILE: cmake/toolchains/3DS.cmake
+    gamecube:
+      short: GameCube
+      settings:
+        CMAKE_TOOLCHAIN_FILE: cmake/toolchain/GameCube.cmakes
